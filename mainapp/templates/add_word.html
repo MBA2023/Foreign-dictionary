@@ -6,10 +6,25 @@
 
 
 <h2 align="center" >Add word to dictionary!</h2>
-<div class="input-group" >
-  <span class="input-group-text">Слово и перевод</span>
-  <input type="text" aria-label="Слово" class="form-control">
-  <input type="text" aria-label="Значение" class="form-control">
-</div>
+<form method="POST" action="" class="row gy-2 gx-3 align-items-center">
+  <div class="col-auto">
+    <input type="text" class="form-group row text-right" placeholder="Слово">
+  </div>
+<div class="col-auto">
+    <input type="text" class="form-group row text-right" placeholder="Перевод">
+  </div>
+  <div class="col-auto">
+    <select class="form-select" >
+      <option selected>Выберите язык</option>
+      <option value="1">Английский</option>
+      <option value="2">Испанский</option>
+      <option value="3">Французский</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </div>
+  {% csrf_token %}
+</form>
 
 {% endblock %}
