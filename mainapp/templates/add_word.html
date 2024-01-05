@@ -7,22 +7,24 @@
 
 <h2 align="center" >Add word to dictionary!</h2>
 <form method="POST" action="" class="row gy-2 gx-3 align-items-center">
-  <div class="col-auto">
-    <input type="text" class="form-group row text-right" placeholder="Слово">
+  <div class="col-sm-3">
+    <label class="visually-hidden" >Слово</label>
+    <input type="text" name="new_word" class="form-control" placeholder="Слово" required>
   </div>
-<div class="col-auto">
-    <input type="text" class="form-group row text-right" placeholder="Перевод">
+  <div class="col-sm-3">
+    <label class="visually-hidden" >Перевод</label>
+    <input type="text" name="translation" class="form-control" placeholder="Перевод" required>
   </div>
-  <div class="col-auto">
-    <select class="form-select" >
+  <div class="col-sm-3">
+    <select class="form-select" name="language">
       <option selected>Выберите язык</option>
-      <option value="1">Английский</option>
-      <option value="2">Испанский</option>
-      <option value="3">Французский</option>
+      <option value="English">Английский</option>
+      <option value="Spanish">Испанский</option>
+      <option value="French">Французский</option>
     </select>
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary">Отправить</button>
+    <button type="submit" class="btn btn-primary">Добавить в словарь</button>
   </div>
   {% csrf_token %}
 </form>
