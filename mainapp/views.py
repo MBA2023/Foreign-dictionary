@@ -3,23 +3,27 @@ from django.http import HttpResponse
 
 
 def main(request):
-    print(request)
     return render(request, "home.html")
 
 def words_list(request):
-    print(request)
-    return render(request, "words_list.html")
+    file = open("dictionary.txt", "r", encoding="utf-8").read().splitlines()
+    words_dictionary = {}
+    for line in file:
+        word1, word2 = line.split("-")
+        words_dictionary[word1] = word2
+    print(words_dictionary)
+    for word in words_dictionary:
+        print(word)
+
+    return render(request, "words_list.html", words_dictionary)
 
 def add_word(request):
-    print(request)
     if request.method == "GET":
         return render(request, "add_word.html")
 
     else:
-        print("первый принт", request)
-        print("2 принт", request.POST)
         with open("dictionary.txt", "a", encoding="utf-8") as file:
-            file.writelines(f"New word: {request.POST['new_word']}, Translation: {request.POST['translation']}, Language: {request.POST['language']} \n")
+            file.writelines(f"{request.POST['word1']}-{request.POST['word2']}\n")
         return redirect(add_word)
 
 

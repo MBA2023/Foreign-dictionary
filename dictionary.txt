@@ -1,6 +1,3 @@
-New word: Car, Translation: Машина, Language: English 
-New word: Car, Translation: Машина, Language: English 
-New word: Car, Translation: Машина, Language: English 
-New word: Home, Translation: Дом, Language: English 
-New word: Enfant, Translation: Ребенок, Language: French 
-New word: Gato, Translation: Кот, Language: Spanish 
+Car-Машина
+Night-Ночь
+Sleep-Спать

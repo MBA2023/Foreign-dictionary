@@ -5,7 +5,26 @@
 {% block content %}
 
 
-<h2>Show all words!</h2>
+<h2 align="center" >Show all words!</h2>
+
+<table class="words_list">
+  <thead>
+    <tr>
+      <th scope="col">Слово</th>
+      <th scope="col">Перевод</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  {% for word in words_dictionary %}
+    <tr>
+      <td>{{ words }}</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+{% endfor %}
 
 
 {% endblock %}
