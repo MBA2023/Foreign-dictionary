@@ -1,3 +1,9 @@
-Car-Машина
-Night-Ночь
-Sleep-Спать
+Word:Car,Translation:Машина
+Word:Night,Translation:Ночь
+Word:Sleep,Translation:Спать
+Word:Cat,Translation:Кошка
+Word:Apple,Translation:Яблоко
+Word:Car,Translation:Машина
+Word:Night,Translation:Ночь
+Word:Night,Translation:Ночь
+Word:Night,Translation:Ночь
